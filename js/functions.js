@@ -3133,7 +3133,7 @@ function buildMenuList(id){
     let ping = (typeof tabInfo.ping_url !== 'undefined') ? tabInfo.ping_url : null;
     ping = (ping !== null && ping !== '') ? `<small class="menu-`+cleanClass(ping)+`-ping-ms hidden-xs label label-rouded label-inverse pull-right pingTime hidden">
 </small><div class="menu-`+cleanClass(ping)+`-ping" data-tab-name="`+name+`" data-previous-state=""></div>` : '';
-	return `<li class="allTabsList" id="menu-${id}" data-tab-id="${id}"><a class="waves-effect"  href="javascript:void(0)" onclick="tabActions(event,'${id}');" onauxclick="tabActions(event,'${id}');">`+iconPrefix(icon)+`<span class="hide-menu elip sidebar-tabName">`+name+`</span>`+ping+`</a></li>`;
+	return `<li class="allTabsList" id="menu-${id}" data-tab-id="${id}"><a class="waves-effect"  href="#" onclick="tabActions(event,'${id}'); return false;" onauxclick="tabActions(event,'${id}'); return false;">`+iconPrefix(icon)+`<span class="hide-menu elip sidebar-tabName">`+name+`</span>`+ping+`</a></li>`;
 }
 function tabProcess(arrayItems) {
 	var iFrameList = '';
